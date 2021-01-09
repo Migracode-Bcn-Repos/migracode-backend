@@ -12,15 +12,15 @@ ctrl.get("/", function (req, res) {
 });
 
 ctrl.post("/", function (req, res) {
-  // ... insert a student into the students table
+  // ... insert a student
 });
 
 ctrl.put("/:studentId", function (req, res) {
-  // ... update a student in the students table
+  // ... update a student
 });
 
 ctrl.delete("/:studentId", function (req, res) {
-  // ... delete a student from the students table
+  // ... delete a student
 });
 
 module.exports = ctrl;

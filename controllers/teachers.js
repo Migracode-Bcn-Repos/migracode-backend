@@ -2,19 +2,19 @@ const { teachersRepo } = require("../repositories");
 const ctrl = require("express").Router();
 
 ctrl.post("/", function (req, res) {
-  // ... insert a teacher into the teachers table
+  // ... insert a teacher
 });
 
 ctrl.get("/", function (req, res) {
-  // ... select all teachers from the teachers table
+  // ... select all teachers
 });
 
 ctrl.put("/:teacherId", function (req, res) {
-  // ... update a teacher in the teachers table
+  // ... update a teacher
 });
 
 ctrl.delete("/:teacherId", function (req, res) {
-  // ... delete a teacher from the teachers table
+  // ... delete a teacher
 });
 
 module.exports = ctrl;
