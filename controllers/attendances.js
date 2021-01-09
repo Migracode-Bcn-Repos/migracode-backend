@@ -1,11 +1,11 @@
 const { attendancesRepo } = require("../repositories");
 const ctrl = require("express").Router();
 
-ctrl.post("/attendances", function (req, res) {
+ctrl.post("/", function (req, res) {
   // ... record a student's attendance of a class in the attendances table
 });
 
-ctrl.get("/attendances", function (req, res) {
+ctrl.get("/", function (req, res) {
   // ... select all attendances from the attendances table
 });
 
