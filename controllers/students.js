@@ -1,8 +1,8 @@
-const repo = require("../repositories/students.js");
+const { studentsRepo } = require("../repositories");
 const ctrl = require("express").Router();
 
 ctrl.get("/", function (req, res) {
-  repo
+  studentsRepo
     .find()
     .then((result) => res.json(result))
     .catch((err) => {
