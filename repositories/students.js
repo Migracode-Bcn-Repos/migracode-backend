@@ -1,12 +1,4 @@
-const { Pool } = require("pg");
-
-const pool = new Pool({
-  user: "",
-  host: "localhost",
-  database: "migracode",
-  password: "",
-  port: 5432,
-});
+const pool = require("../db.js");
 
 function find() {
   return pool.query("SELECT * FROM students;").then((result) => result.rows);
