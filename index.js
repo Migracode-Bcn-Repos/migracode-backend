@@ -1,39 +1,10 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const { Pool } = require("pg");
-
-const pool = new Pool({
-  user: "",
-  host: "localhost",
-  database: "migracode",
-  password: "",
-  port: 5432,
-});
+const routes = require("./routes.js");
 
 const app = express();
 app.use(bodyParser.json());
-
-app.post("/students", function (req, res) {
-  // ... insert a student into the students table
-});
-
-app.get("/students", function (req, res) {
-  pool
-    .query("SELECT * FROM students;")
-    .then((result) => res.json(result.rows))
-    .catch((err) => {
-      console.error(err.message);
-      res.status(500).send("Internal Server Error");
-    });
-});
-
-app.put("/students/:studentId", function (req, res) {
-  // ... update a student in the students table
-});
-
-app.delete("/students/:studentId", function (req, res) {
-  // ... delete a student from the students table
-});
+app.use(routes);
 
 app.post("/languages", function (req, res) {
   // ... insert a language into the languages table
